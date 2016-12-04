@@ -3,85 +3,118 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <nav class="main-menu">
         <ul class="main-menu__list">
-          <li class="main-menu__item"><a class="main-menu__link" href="index.html">Главная</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="index.html">Главная</a>
+            <button class="main-menu__toggle_close" type="button">&times;</button>
+          </li>
           <li class="main-menu__item"><a class="main-menu__link">Фото и видео</a></li>
           <li class="main-menu__item"><a class="main-menu__link" href="form.html">Форма отзыва</a></li>
           <li class="main-menu__item"><a class="main-menu__link" href="#">HTML Academy</a></li>
         </ul>
-        <button class="main-menu__toggle_close" type="button">&times;</button>
-        <button class="main-menu__toggle" type="button">&#9776;</button>
       </nav>
-      <div class="main-header__logo">
-        <a href="index.html"><img class="logo" src="http://placehold.it/100x85"></a>
+      <div class="main-header__wrapper">
+        <div class="main-header__logo">
+          <a href="index.html"><img class="logo" src="img/logo-sedona-mobile.svg" width="100" height="85"></a>
+        </div>
+        <button class="main-menu-toggle" type="button">&#9776;</button>
       </div>
     </header>
-    <main>
-      <section class="intro intro_size">
-        <img class="intro__img" src="http://placehold.it/230x40">
-        <h1 class="intro__title title title_small">Фото и видео</h1>
-        <p class="intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+    <main class="main-page">
+      <section class="intro">
+        <div class="intro__img-wrap intro__img-wrap_size">
+          <img class="intro__img" src="img/text-sedona.svg" width="230px" height="40px">
+        </div>
+        <div class="intro__content-wrap">
+          <h1 class="intro__title">Фото и видеo</h1>
+          <p class="intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        </div>
       </section>
       <section class="gallery">
-        <article class="photo">
-          <a href="#"><img class="photo__img" src="http://placehold.it/280x280"></a>
-          <h2 class="photo__title title">Неродные просторы</h2>
-          <p class="photo__author">Автор фото: Борис</p>
-          <div class="photo-like">
-            <button class="photo-like__icon" type="button"></button>
-            <span class="photo-like__text">1350</span>
+        <article class="photo-block">
+          <div class="photo-block__content-wrapper">
+            <a href="#"><img class="photo-block__img" src="img/photo-1-mobile@1x.jpg" width="280" height="280"></a>
+            <h2 class="photo-block__title">Неродные просторы</h2>
+            <p class="photo-block__author">Автор фото: Борис</p>
+            <div class="like">
+              <button class="like__icon" type="button"></button>
+              <span class="like__text">1350</span>
+            </div>
           </div>
         </article>
-        <article class="photo">
-          <a href="#"><img class="photo__img" src="http://placehold.it/280x280"></a>
-          <h2 class="photo__title title">Местная растительность</h2>
-          <p class="photo__author">Автор фото: Сергей</p>
-          <div class="photo-like">
-            <button class="photo-like__icon" type="button"></button>
-            <span class="photo-like__text">143</span>
+        <article class="photo-block">
+          <div class="photo-block__content-wrapper">
+            <a href="#"><img class="photo-block__img" src="img/photo-2-mobile@1x.jpg" width="280" height="280"></a>
+            <h2 class="photo-block__title">Местная растительность</h2>
+            <p class="photo-block__author">Автор фото: Сергей</p>
+            <div class="like">
+              <button class="like__icon" type="button"></button>
+              <span class="like__text">143</span>
+            </div>
           </div>
         </article>
-        <article class="photo">
-          <a href="#"><img class="photo__img" src="http://placehold.it/280x280"></a>
-          <h2 class="photo__title title">Дорога на север</h2>
-          <p class="photo__author">Автор фото: Петр</p>
-          <div class="photo-like">
-            <button class="photo-like__icon" type="button"></button>
-            <span class="photo-like__text">96</span>
+        <article class="photo-block">
+          <div class="photo-block__content-wrapper">
+            <a href="#"><img class="photo-block__img" src="img/photo-3-mobile@1x.jpg" width="280" height="280"></a>
+            <h2 class="photo-block__title">Дорога на север</h2>
+            <p class="photo-block__author">Автор фото: Петр</p>
+            <div class="like">
+              <button class="like__icon" type="button"></button>
+              <span class="like__text">96</span>
+            </div>
           </div>
         </article>
-        <article class="photo">
-          <a href="#"><img class="photo__img" src="http://placehold.it/280x280"></a>
-          <h2 class="photo__title title">Мост Дьявола</h2>
-          <p class="photo__author">Автор фото: Антон</p>
-          <div class="photo-like">
-            <button class="photo-like__icon" type="button"></button>
-            <span class="photo-like__text">254</span>
+        <article class="photo-block photo-block_border">
+          <div class="photo-block__content-wrapper">
+            <a href="#"><img class="photo-block__img" src="img/photo-4-mobile@1x.jpg" width="280" height="280"></a>
+            <h2 class="photo-block__title">Мост Дьявола</h2>
+            <p class="photo-block__author">Автор фото: Антон</p>
+            <div class="like">
+              <button class="like__icon" type="button"></button>
+              <span class="like__text">254</span>
+            </div>
           </div>
         </article>
-      </section>
-      <section class="promo">
-        <p class="promo__title title title_small">Все еще сомневаетесь?</p>
-        <p class="promo__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
       </section>
       <section class="video">
+        <header class="video__content-wrapper">
+          <p class="video__title">Все еще сомневаетесь?</p>
+          <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        </header>
+<!--
         <video width="320" height="200" controls poster
-="http://placehold.it/320x200"></video>
+="http://placehold.it/320x200"></video> - это получается не нужно, да?
+  -->
+        <section class="video-block">
+          <img class="video-block__img" src="img/video-mobile@1x.jpg" width="320px" height="200px">
+          <div class="video-block__control">
+            <div class="video-block__progress-bar">
+              <div class="video-block__scale"></div>
+              <div class="video-block__slider"></div>
+            </div>
+            <div class="video-block__btns-wrap">
+              <button class="video-block__btn video-block__btn_replay" type="button"></button>
+              <button class="video-block__btn video-block__btn_subtitles" type="button"></button>
+              <button class="video-block__btn video-block__btn_fullscreen" type="button"></button>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
     <footer class="main-footer">
-      <p class="main-footer__title title">#visitsedona</p>
-      <div class="social-btns">
-        <a class="social-btns__item social-btns__item_tw"></a>
-        <a class="social-btns__item social-btns__item_fb"></a>
-        <a class="social-btns__item social-btns__item_youtube"></a>
+      <p class="main-footer__hashtag">#visitsedona</p>
+      <div class="social-links">
+        <a class="social-links__item social-links__item_tw"></a>
+        <a class="social-links__item social-links__item_fb"></a>
+        <a class="social-links__item social-links__item_youtube"></a>
       </div>
       <div class="copyright">
-        <p class="copyright__text">Разработано<a class="copiright__img"></a></p>
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__img"></a>
       </div>
     </footer>
   </body>

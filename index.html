@@ -3,93 +3,119 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <nav class="main-menu">
         <ul class="main-menu__list">
-          <li class="main-menu__item"><a class="main-menu__link">Главная</a></li>
+          <li class="main-menu__item"><a class="main-menu__link">Главная</a>
+            <button class="main-menu__toggle_close" type="button">&times;</button>
+          </li>
           <li class="main-menu__item"><a class="main-menu__link" href="photo.html">Фото и видео</a></li>
           <li class="main-menu__item"><a class="main-menu__link" href="form.html">Форма отзыва</a></li>
           <li class="main-menu__item"><a class="main-menu__link" href="#">HTML Academy</a></li>
         </ul>
-        <button class="main-menu__toggle_close" type="button">&times;</button>
-        <button class="main-menu__toggle" type="button">&#9776;</button>
       </nav>
-      <div class="main-header__logo">
-        <a href="index.html"><img class="logo" src="http://placehold.it/100x85"></a>
+      <div class="main-header__wrapper">
+        <div class="main-header__logo">
+          <a href="index.html"><img class="logo" src="img/logo-sedona-mobile.svg" width="100" height="85"></a>
+        </div>
+        <button class="main-menu-toggle" type="button">&#9776;</button>
       </div>
     </header>
-    <main>
+    <main class="main-page">
       <section class="intro">
-        <img class="intro__img" src="http://placehold.it/280x215">
-        <h1 class="intro__title title title_small">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
-        <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+        <div class="intro__img-wrap">
+          <img class="intro__img" src="img/text-sedona-index.svg" width="280" height="215">
+        </div>
+        <div class="intro__content-wrap">
+          <h1 class="intro__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+          <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+        </div>
       </section>
       <section class="features">
-        <section class="features__item features__item_bg-blue features__item_text-white">
-          <h2 class="features__title title">Настоящий городок</h2>
-          <p class="features__number">&mdash;   &#8470;1 &mdash;</p>
-          <p class="features__text">Седоне не аттракцион для туристов, там течет своя жизнь</p>
-          <div class="features__img"></div>
+        <section class="features__item features__item_bg-blue features__item_text-white features__item_padding">
+          <div class="features__content-wrapper">
+            <h2 class="features__title features__title_white">Настоящий городок</h2>
+            <p class="features__number">&mdash;   &#8470;1 &mdash;</p>
+            <p class="features__text features__text_padding features__text_border">Седоне не аттракцион для туристов, там течет своя жизнь</p>
+          </div>
+          <div class="features__img features__img_margin"></div>
         </section>
         <section class="info-cards">
-          <div class="info-cards__item">
-            <img class="info-cards__img" src="http://placehold.it/38x38">
-            <h3 class="info-cards__title title">Жилье</h3>
-            <p class="info-cards__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-          </div>
-          <div class="info-cards__item">
-            <img class="info-cards__img" src="http://placehold.it/38x38">
-            <h3 class="info-cards__title title">Сувениры</h3>
-            <p class="info-cards__text">Не только китайского, но и местного производства!</p>
-          </div>
-          <div class="info-cards__item">
-            <img class="info-cards__img" src="http://placehold.it/38x38">
-            <h3 class="info-cards__title title">Еда</h3>
-            <p class="info-cards__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <div class="info-cards__wrapper">
+            <div class="info-cards__item">
+              <div class="info-cards__img"></div>
+              <h3 class="info-cards__title">Жилье</h3>
+              <p class="info-cards__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </div>
+            <div class="info-cards__item">
+              <div class="info-cards__img info-cards__img_gift"></div>
+              <h3 class="info-cards__title">Сувениры</h3>
+              <p class="info-cards__text">Не только китайского, но и местного производства!</p>
+            </div>
+            <div class="info-cards__item">
+              <div class="info-cards__img info-cards__img_burger"></div>
+              <h3 class="info-cards__title">Еда</h3>
+              <p class="info-cards__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </div>
           </div>
         </section>
-        <section class="features__item features__item_bg-blue features__item_text-white">
-          <h2 class="features__title title">Там есть мост Дьявола</h2>
-          <p class="features__number">&mdash;   &#8470;2 &mdash;</p>
-          <p class="features__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-          <div class="features__img"></div>
+        <section class="features__item features__item_bg-blue features__item_text-white features__item_padding">
+          <div class="features__content-wrapper">
+            <h2 class="features__title features__title_white">Там есть мост Дьявола</h2>
+            <p class="features__number">&mdash;   &#8470;2 &mdash;</p>
+            <p class="features__text features__text_padding features__text_border">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          </div>
+          <div class="features__img features__img_devils-bridge"></div>
         </section>
         <section class="features__item">
-          <h2 class="features__title">Небольшая площадь</h2>
-          <p class="features__number">&mdash;   &#8470;3 &mdash;</p>
-          <p class="features__text">Все достопримечательности находятся очень близко</p>
+          <div class="features__content-wrapper">
+            <h2 class="features__title">Небольшая площадь</h2>
+            <p class="features__number">&mdash;   &#8470;3 &mdash;</p>
+            <p class="features__text">Все достопримечательности находятся очень близко</p>
+          </div>
         </section>
         <section class="features__item">
-          <h2 class="features__title title">Красивая дорога</h2>
-          <p class="features__number">&mdash;   &#8470;4 &mdash;</p>
-          <p class="features__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <div class="features__content-wrapper">
+            <h2 class="features__title">Красивая дорога</h2>
+            <p class="features__number">&mdash;   &#8470;4 &mdash;</p>
+            <p class="features__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </div>
         </section>
         <section class="features__item">
-          <h2 class="features__title title">Мало туристов</h2>
-          <p class="features__number">&mdash;   &#8470;5 &mdash;</p>
-          <p class="features__text">Большинство едет в Гранд Каньон и толпится там</p>
+          <div class="features__content-wrapper">
+            <h2 class="features__title">Мало туристов</h2>
+            <p class="features__number">&mdash;   &#8470;5 &mdash;</p>
+            <p class="features__text">Большинство едет в Гранд Каньон и толпится там</p>
+          </div>
         </section>
       </section>
       <section class="hotel-booking">
-        <p class="hotel-booking__title title">Заинтересовались?</p>
-        <p class="hotel-booking__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <button class="btn" type="button">Найти гостиницу</button>
+        <div class="hotel-booking__content-wrapper">
+          <p class="hotel-booking__title">Заинтересовались?</p>
+          <p class="hotel-booking__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <button class="btn" type="button">Найти гостиницу</button>
+        </div>
       </section>
       <section class="map">
+        <div class="map__img">
+          <img class="map__marker" src="img/icon-map-marker.svg">
+        </div>
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=o-O8M_QszMu3pVLeYIMO98EMI3L4CDYU&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
       </section>
     </main>
     <footer class="main-footer">
-      <p class="main-footer__hashtag title">#visitsedona</p>
-      <div class="social-btns">
-        <a class="social-btns__item social-btns__item_tw"></a>
-        <a class="social-btns__item social-btns__item_fb"></a>
-        <a class="social-btns__item social-btns__item_youtube"></a>
+      <p class="main-footer__hashtag">#visitsedona</p>
+      <div class="social-links">
+        <a class="social-links__item social-links__item_tw"></a>
+        <a class="social-links__item social-links__item_fb"></a>
+        <a class="social-links__item social-links__item_youtube"></a>
       </div>
       <div class="copyright">
-        <p class="copyright__text">Разработано<a class="copiright__img"></a></p>
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__img"></a>
       </div>
     </footer>
   </body>
