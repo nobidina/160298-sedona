@@ -1,5 +1,6 @@
 .main-footer {
-  margin-bottom: 20px;
+  .container();
+  margin: 0 auto 20px auto;
   text-align: center;
 }
 .main-footer__hashtag {
@@ -7,4 +8,29 @@
   font-family: "ptsansbold", sans-serif;
   font-size: 21px;
   color: @color-black;
+}
+.main-footer__copyright-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  padding-top: 3px;
+}
+.main-footer__copyright-img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 35px;
+  margin-right: -2px;
+  background: url(../../img/logo-htmlacademy.svg) no-repeat;
+}
+
+@media @tablet-widths {
+  .main-footer {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+  }
+  .main-footer__hashtag {
+    margin-bottom: 0;
+  }
 }

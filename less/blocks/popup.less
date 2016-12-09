@@ -1,5 +1,6 @@
 .popup {
-  width: 320px;
+  .container();
+  padding-bottom: 35px;
   text-align: center;
 }
 .popup__content-wrapper {
@@ -21,4 +22,40 @@
 .popup__btn-wrap {
   padding: 20px;
   background-color: @bg-lightgrey;
+}
+
+@media @tablet-widths {
+  .popup {
+    padding-bottom: 0;
+    &_error {
+      width: 400px;
+      padding-top: 60px;
+      padding-bottom: 50px;
+    }
+    &_success {
+      width: 644px;
+      padding-top: 60px;
+    }
+  }
+  .popup__content-wrapper {
+    width: 275px;
+    &_success {
+      width: 400px;
+    }
+  } 
+  .popup__title {
+    width: 400px;
+    margin: 0 auto 30px auto;
+    font-size: 30px;
+    line-height: 40px;
+    &_width {
+      width: 220px;
+    }
+  }
+  .popup__text {
+    margin-bottom: 37px;
+  }
+  .popup__btn-wrap {
+    padding: 45px 95px;
+  }
 }
