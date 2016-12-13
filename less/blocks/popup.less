@@ -1,6 +1,12 @@
 .popup {
-  width: 320px;
+  .container();
+  padding-top: 40px;
+  padding-bottom: 35px;
   text-align: center;
+  background: @bg-white;
+  &_big {
+    padding-bottom: 0;
+  }
 }
 .popup__content-wrapper {
   width: 230px;
@@ -21,4 +27,37 @@
 .popup__btn-wrap {
   padding: 20px;
   background-color: @bg-lightgrey;
+}
+
+@media @tablet-widths {
+  .popup {
+    width: 400px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    &_big {
+      width: 644px;
+      padding-bottom: 0;
+    }
+  }
+  .popup__content-wrapper {
+    width: 275px;
+    &_big {
+      width: 400px;
+    }
+  }
+  .popup__title {
+    width: 400px;
+    margin: 0 auto 30px auto;
+    font-size: 30px;
+    line-height: 40px;
+    &_small {
+      width: 220px;
+    }
+  }
+  .popup__text {
+    margin-bottom: 37px;
+  }
+  .popup__btn-wrap {
+    padding: 45px 95px;
+  }
 }

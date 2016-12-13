@@ -1,12 +1,29 @@
 .info-cards {
+  .content-container();
   text-align: left;
 }
 .info-cards__item {
-  margin-bottom: 27px;
   position: relative;
-}
-.info-cards__wrapper {
-  .container();
+  margin-bottom: 29px;
+  &::before {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    background: url(../../img/icon-house.svg) no-repeat;
+    background-size: 100% 100%;
+  }
+  &_img-gift::before {
+    background: url(../../img/icon-gift.svg) no-repeat;
+    background-size: 100% 100%;
+  }
+  &_img-burger::before {
+    background: url(../../img/icon-burger.svg) no-repeat;
+    background-size: 100% 100%;
+  }
 }
 .info-cards__title {
   margin-left: 50px;
@@ -18,20 +35,62 @@
 .info-cards__text {
   margin-left: 50px;
 }
-.info-cards__img {
-  width: 38px;
-  height: 38px;
-  position: absolute;
-  top: -15px;
-  left: 0;
-  background: url(../../img/icon-house.svg) no-repeat;
-  background-size: 100% 100%;
-  &_gift {
-    background: url(../../img/icon-gift.svg) no-repeat;
-    background-size: 100% 100%;
+@media @tablet-widths {
+  .info-cards {
+    width: 768px;
+    display: flex;
+    justify-content: space-around;
   }
-  &_burger {
-    background: url(../../img/icon-burger.svg) no-repeat;
-    background-size: 100% 100%;
+  .info-cards__item {
+    width: 170px;
+    margin-bottom: 60px;
+    &::before {
+      content: "";
+      display: block;
+      width: 78px;
+      height: 76px;
+      position: absolute;
+      top: 0;
+      left: 45px;
+      background: url(../../img/icon-house.svg) no-repeat;
+      background-size: 100% 100%;
+    }
+    &_img-gift::before {
+      background: url(../../img/icon-gift.svg) no-repeat;
+      background-size: 100% 100%;
+    }
+    &_img-burger::before {
+      background: url(../../img/icon-burger.svg) no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .info-cards__title {
+    margin-top: 105px;
+    margin-left: 0px;
+    text-align: center;
+    font-size: 21px;
+  }
+  .info-cards__text {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media @desktop-widths {
+  .info-cards {
+    width: 1200px;
+  }
+  .info-cards__item {
+    width: 290px;
+    margin-bottom: 80px;
+    &::before {
+      left: 106px;
+    }
+    &_img-gift::before {
+      left: 106px;
+    }
+    &_img-burger::before {
+      left: 106px;
+    }
   }
 }

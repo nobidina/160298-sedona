@@ -1,7 +1,29 @@
-.main-header__wrapper {
-  .container();
+.main-header {
+  display: flex;
+  flex-direction: column;
+  background: @bg-white;
 }
 .main-header__logo {
+  align-self: center;
   width: 100px;
   height: 85px;
+}
+@media @tablet-widths {
+  .main-header {
+    position: relative;
+  }
+  .main-header__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -50px;
+  }
+}
+
+@media @desktop-widths {
+  .main-header__logo {
+    width: 190px;
+    height: 97px;
+    margin-left: -95px;
+  }
 }

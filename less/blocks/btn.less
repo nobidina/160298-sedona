@@ -1,4 +1,5 @@
 .btn {
+  cursor: pointer;
   width: 280px;
   padding: 16px 0 20px 0;
   border: none;
@@ -7,8 +8,27 @@
   text-transform: uppercase;
   color: @color-white;
   background: @bg-blue;
-  &_size {
+  &_small {
     width: 180px;
-    margin-bottom: 35px;
+  }
+}
+
+@media @tablet-widths {
+  .btn {
+    width: 460px;
+    padding: 18px 0 15px 0;
+    &_submit {
+      width: 324px;
+    }
+    &_small {
+      width: 275px;
+    }
+  }
+}
+@media @desktop-widths {
+  .btn {
+    &_submit {
+      width: 480px;
+    }
   }
 }

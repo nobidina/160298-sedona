@@ -1,15 +1,26 @@
 .like {
+  display: flex;
+  align-items: flex-end;
   width: 70px;
 }
 .like__icon {
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 20px;
   border: none;
   margin-right: 8px;
   background-color: white;
-  background: url(../../img/icon-like.svg) no-repeat 0 5px;
+  background: url(../../img/icon-like.svg) no-repeat;
 }
 .like__text {
   font-family: "ptsansbold", sans-serif;
+  line-height: 18px;
   color: @color-black;
+}
+
+@media @tablet-widths {
+  .like {
+    margin-right: 20px;
+  }
+  .like__text {
+  }
 }

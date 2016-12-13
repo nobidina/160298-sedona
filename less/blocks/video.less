@@ -1,9 +1,10 @@
 .video {
-  margin-bottom: 75px;
+  padding-bottom: 75px;
   text-align: center;
+  background: @bg-white;
 }
 .video__content-wrapper {
-  .container();
+  .content-container();
 }
 .video__title {
   margin-bottom: 25px;
@@ -13,4 +14,17 @@
 }
 .video__text {
   margin-bottom: 32px;
+}
+
+@media @tablet-widths {
+  .video__content-wrapper {
+    width: 450px;
+  }
+  .video__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+  .video__text {
+    margin-bottom: 70px;
+  }
 }
