@@ -109,17 +109,18 @@
             <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
           </header>
           <section class="video-block">
-            <img class="video-block__img" src="img/video-mobile@1x.jpg" width="320px" height="200px">
+            <div class="video-block__img">
+              <img src="img/video-mobile@1x.jpg" width="320px" height="200px">
+            </div>
             <div class="video-block__control">
               <div class="video-block__progress-bar">
-                <div class="video-block__scale"></div>
-                <div class="video-block__slider"></div>
+                <div class="video-block__scale">
+                  <div class="video-block__slider"></div>
+                </div>
               </div>
-              <div class="video-block__btns-wrapper">
-                <button class="video-block__btn video-block__btn_replay" type="button"></button>
-                <button class="video-block__btn video-block__btn_subtitles" type="button"></button>
-                <button class="video-block__btn video-block__btn_fullscreen" type="button"></button>
-              </div>
+              <button class="video-block__btn video-block__btn_replay" type="button"></button>
+              <button class="video-block__btn video-block__btn_subtitles" type="button"></button>
+              <button class="video-block__btn video-block__btn_fullscreen" type="button"></button>
             </div>
           </section>
         </section>
