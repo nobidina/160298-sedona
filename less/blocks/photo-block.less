@@ -21,6 +21,7 @@
   color: @color-black;
 }
 .photo-block__author {
+  display: block;
   margin-bottom: 5px;
   text-transform: none;
 }
@@ -44,10 +45,20 @@
     margin-bottom: 0;
   }
   .photo-block__content-wrapper {
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
     width: 100%;
     padding: 15px 0;
     background: @bg-lightgrey;
+  }
+  .photo-block__title {
+    margin-right: 20px;
+  }
+  .photo-block__author {
+    width: 100%;
+    order: 3;
   }
 }
 

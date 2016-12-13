@@ -1,6 +1,7 @@
 .features {
   text-align: center;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
+  background: @bg-white;
 }
 .features__item {
   background-color: @bg-darkgrey;
@@ -28,6 +29,7 @@
   }
 }
 .features__number {
+  display: block;
   margin-bottom: 12px;
 }
 .features__text {
@@ -56,7 +58,7 @@
   .features {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
   }
   .features__item {
     width: 256px;
@@ -93,7 +95,10 @@
     margin-bottom: 14px;
   }
   .features__text {
-    padding: 0 50px 45px 50px;
+    padding: 0 54px 45px 54px;
+    &_thin {
+      padding: 0 50px 45px 50px;
+    }
     &_padding {
       padding:0 45px 42px 45px;
     }
@@ -120,6 +125,9 @@
     padding: 50px 123px 0 123px;
   }
   .features__text {
-    padding: 0 70px 60px 70px;
+    padding: 0 73px 60px 73px;
+    &_thin {
+      padding: 0 90px 45px 90px;
+    }
   }
 }

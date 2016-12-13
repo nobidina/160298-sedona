@@ -1,49 +1,29 @@
 .info-cards {
   .content-container();
-  margin-bottom: 27px;
   text-align: left;
 }
 .info-cards__item {
   position: relative;
-  &_img-gift {
-    order: 2;
+  margin-bottom: 29px;
+  &::before {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    background: url(../../img/icon-house.svg) no-repeat;
+    background-size: 100% 100%;
   }
-  &_img-burger {
-    order: 1;
+  &_img-gift::before {
+    background: url(../../img/icon-gift.svg) no-repeat;
+    background-size: 100% 100%;
   }
-    &::before {
-      content: "";
-      display: block;
-      width: 38px;
-      height: 38px;
-      position: absolute;
-      top: -15px;
-      left: 0;
-      background: url(../../img/icon-house.svg) no-repeat;
-      background-size: 100% 100%;
-    }
-    &_img-gift::before {
-      content: "";
-      display: block;
-      width: 38px;
-      height: 38px;
-      position: absolute;
-      top: -15px;
-      left: 0;
-      background: url(../../img/icon-gift.svg) no-repeat;
-      background-size: 100% 100%;
-    }
-    &_img-burger::before {
-      content: "";
-      display: block;
-      width: 38px;
-      height: 38px;
-      position: absolute;
-      top: -15px;
-      left: 0;
-      background: url(../../img/icon-burger.svg) no-repeat;
-      background-size: 100% 100%;
-    }
+  &_img-burger::before {
+    background: url(../../img/icon-burger.svg) no-repeat;
+    background-size: 100% 100%;
+  }
 }
 .info-cards__title {
   margin-left: 50px;
@@ -58,12 +38,12 @@
 @media @tablet-widths {
   .info-cards {
     width: 768px;
-    margin-bottom: 60px;
     display: flex;
     justify-content: space-around;
   }
   .info-cards__item {
     width: 170px;
+    margin-bottom: 60px;
     &::before {
       content: "";
       display: block;
@@ -76,24 +56,10 @@
       background-size: 100% 100%;
     }
     &_img-gift::before {
-      content: "";
-      display: block;
-      width: 78px;
-      height: 76px;
-      position: absolute;
-      top: 0;
-      left: 45px;
       background: url(../../img/icon-gift.svg) no-repeat;
       background-size: 100% 100%;
     }
     &_img-burger::before {
-      content: "";
-      display: block;
-      width: 78px;
-      height: 76px;
-      position: absolute;
-      top: 0;
-      left: 45px;
       background: url(../../img/icon-burger.svg) no-repeat;
       background-size: 100% 100%;
     }
@@ -113,10 +79,10 @@
 @media @desktop-widths {
   .info-cards {
     width: 1200px;
-    margin-bottom: 80px;
   }
   .info-cards__item {
     width: 290px;
+    margin-bottom: 80px;
     &::before {
       left: 106px;
     }
