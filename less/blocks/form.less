@@ -13,25 +13,31 @@
 }
 .form__title {
   width: 280px;
-  margin: 25px 0;
+  margin: 17px 0 19px 0;
   text-align: center;
   font-family: "ptsansbold", sans-serif;
   font-size: 18px;
+  letter-spacing: 0.01em;
   color: @color-black;
 }
 .form__label {
   position: relative;
   cursor: pointer;
+  flex-shrink: 0;
+  &_margin {
+    margin-left: 20px;
+  }
   &_strong {
     font-family: "ptsansbold", sans-serif;
     font-size: 18px;
+    line-height: 20px;
     text-transform: none;
   }
   &_radio::before {
     content: "";
     display: block;
     position: absolute;
-    top: -17px;
+    top: -15px;
     left: -80px;
     width: 56px;
     height: 56px;
@@ -42,8 +48,8 @@
     content: "";
     display: none;
     position: absolute;
-    top: 0;
-    left: -63px;
+    top: 2px;
+    left: -62px;
     width: 22px;
     height: 22px;
     border-radius: 50%;
@@ -64,17 +70,21 @@
     content: "";
     display: none;
     position: absolute;
-    top: 5px;
-    left: -64px;
+    top: 7px;
+    left: -62px;
     width: 24px;
     height: 16px;
     background: url(../../img/icon-tick.svg) no-repeat;
   }
 }
+.form__input-wrapper {
+  display: flex;
+  align-items: baseline;
+}
 .form__input {
   box-sizing: border-box;
-  width: 190px;
-  margin-left: 12px;
+  width: 100%;
+  margin-left: 15px;
   margin-bottom: 20px;
   padding: 19px;
   border: none;
@@ -82,7 +92,7 @@
   font-size: 18px;
   background: @bg-lightgrey;
   &_middle {
-    width: 230px;
+    width: 100%;
   }
   &_big {
     width: 280px;
@@ -95,23 +105,40 @@
   }
 }
 input::-webkit-input-placeholder {
+  font-family: "ptsansbold", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: none;
   color: @color-black;
 }
 input::-moz-placeholder {
+  font-family: "ptsansbold", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: none;
   color: @color-black;
 }
 input:-moz-placeholder {
+  font-family: "ptsansbold", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: none;
   color: @color-black;
 }
 input:-ms-input-placeholder {
+  font-family: "ptsansbold", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: none;
   color: @color-black;
 }
 .form__icon {
+  position: absolute;
+  top: 32px;
+  left: 198px;
+  display: block;
   width: 58px;
   height: 58px;
-  position: absolute;
-  top: 34px;
-  right: 0;
   background: url(../../img/icon-phone.svg) no-repeat 20px 22px,
               #e6e6e6;
   &_img-email {
@@ -126,10 +153,10 @@ input:-ms-input-placeholder {
   color: #ff5c5c;
 }
 .form__radio-wrapper {
-  margin-left: 80px;
-  margin-bottom: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  margin-left: 78px;
+  margin-bottom: 6px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   &:last-child {
     margin-bottom: 0;
   }
@@ -141,12 +168,13 @@ input:-ms-input-placeholder {
   }
 }
 .form__checkbox-wrapper {
-  margin-left: 80px;
-  margin-bottom: 25px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin-top: -6px;
+  margin-left: 78px;
+  margin-bottom: 23px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   &:last-child {
-    margin-bottom: 0;
+    margin-bottom: -4px;
   }
 }
 .form__checkbox {
@@ -159,7 +187,7 @@ input:-ms-input-placeholder {
   box-sizing: border-box;
   width: 280px;
   margin-bottom: 50px;
-  padding: 20px 20px 95px 20px;
+  padding: 15px 18px 105px 18px;
   border: none;
   resize: none;
   font-family: "ptsansbold", sans-serif;
@@ -168,6 +196,7 @@ input:-ms-input-placeholder {
   background: @bg-lightgrey;
 }
 textarea::-webkit-input-placeholder {
+  line-height: 25px;
   color: @color-black;
 }
 textarea::-moz-placeholder {
@@ -251,18 +280,18 @@ textarea:-ms-input-placeholder {
   .form__checkbox-wrapper {
     width: 140px;
     align-content: space-between;
-    &:nth-of-type(1) {
+    &_1 {
       margin-left: 175px;
     }
-    &:nth-of-type(2) {
+    &_2 {
       order: 3;
       margin-left: 175px;
     }
-    &:nth-of-type(3) {
+    &_3 {
       order: 2;
       margin-right: 80px;
     }
-    &:nth-of-type(4) {
+    &_4 {
       order: 4;
       margin-right: 80px;
     }
@@ -324,19 +353,19 @@ textarea:-ms-input-placeholder {
   .form__checkbox-wrapper {
     width: 125px;
     justify-content: flex-start;
-    &:nth-of-type(1) {
+    &_1 {
       margin-left: 80px;
     }
-    &:nth-of-type(2) {
+    &_2 {
       order: 3;
       margin-left: 0;
     }
-    &:nth-of-type(3) {
+    &_3 {
       order: 2;
       margin-right: 0;
       margin-left: 0;
     }
-    &:nth-of-type(4) {
+    &_4 {
       order: 4;
       margin-right: 0;
       margin-left: 0;

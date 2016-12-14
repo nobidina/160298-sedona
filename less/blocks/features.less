@@ -1,41 +1,43 @@
 .features {
+  padding-bottom: 27px;
   text-align: center;
-  padding-bottom: 30px;
   background: @bg-white;
 }
 .features__item {
+  padding-top: 25px;
   background-color: @bg-darkgrey;
-  &_border {
-    border-bottom: 1px solid #d6d6d6;
+  &_border::after {
+    content: "";
+    display: block;
+    width: 280px;
+    height: 1px;
+    margin: 0 auto;
+    background: #d6d6d6;
   }
   &_bg-blue {
+    padding-top: 38px;
     background: @bg-blue;
-  }
-  &_text-white {
     color: @color-white;
   }
 }
 .features__title {
-  margin-bottom: 10px;
-  padding-top: 30px;
+  margin-bottom: 5px;
   font-size: 18px;
   font-family: "ptsansbold", sans-serif;
   color: @color-black;
-  &_padding-top {
-    padding-top: 40px;
-  }
   &_white {
     color: @color-white;
   }
 }
 .features__number {
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 }
 .features__text {
-  padding:0 35px 25px 35px;
+  line-height: 20px;
+  padding: 0 35px 30px 35px;
   &_padding {
-    padding:0 27px 35px 27px;
+    padding: 0 27px 41px 27px;
   }
 }
 .features__wbr {
@@ -43,13 +45,13 @@
 }
 .features__img {
   height: 260px;
-  background: url(../../img/photo-city@1x.jpg) no-repeat -100px 0;
-  background-size: auto 100%;
+  background: url(../img/photo-city@1x.jpg) no-repeat -100px 0;
+  background-size: cover;
   &_margin {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
   &_devils-bridge {
-    background: url(../../img/photo-4-mobile@1x.jpg) no-repeat 0 -90px;
+    background: url(../img/photo-4-mobile@1x.jpg) no-repeat 0 -90px;
   background-size: 320px 360px;
   }
 }
@@ -62,17 +64,13 @@
   }
   .features__item {
     width: 256px;
-    border: none;
-    &_grid {
+    &_border::after {
+      display: none;
+    }
+    &_bg-blue {
       display: flex;
       width: 768px;
       padding: 0;
-    }
-    &_margin {
-      margin-bottom: 55px;
-    }
-    &_border {
-      border: none;
     }
   }
   .features__content-wrapper {
@@ -111,7 +109,7 @@
 @media @desktop-widths {
   .features__item {
     width: 400px;
-    &_grid {
+    &_bg-blue {
       width: 1200px;
     }
   }
