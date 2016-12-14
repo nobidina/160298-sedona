@@ -1,22 +1,22 @@
 .intro {
-  margin-top: -27px;
-  padding-bottom: 41px;
+  margin-top: -29px;
   background: @bg-white;
 }
 .intro__content-wrapper {
   .content-container();
 }
 .intro__wrapper {
-  margin-bottom: 42px;
-  padding-top: 90px;
-  padding-bottom: 85px;
+  margin-bottom: 37px;
+  padding-top: 89px;
+  padding-bottom: 78px;
   text-align: center;
-  background: url(../../img/bg-back-mobile@1x.jpg) no-repeat -235px 0px;
-  background-size: auto 100%;
+  background: url(../img/bg-back-mobile@1x.jpg) no-repeat -225px -1px;
+  background-size: cover;
   &_small {
+    margin-bottom: 29px;
     padding-top: 50px;
-    padding-bottom: 70px;
-    background: url(../../img/bg-back-mobile@1x.jpg) no-repeat -220px -230px;
+    padding-bottom: 65px;
+    background: url(../img/bg-back-mobile@1x.jpg) no-repeat -225px -230px;
   }
 }
 .intro__title {
@@ -28,7 +28,16 @@
   color: @color-black;
 }
 .intro__text {
+  padding-bottom: 41px;
   text-align: center;
+  &_small {
+    padding: 0 5px 25px 5px;
+    line-height: 25px;
+    letter-spacing: 0.0001em;
+  }
+  &_padding {
+    padding: 0 2px 15px 3px;
+  }
 }
 
 @media @tablet-widths {
@@ -42,7 +51,7 @@
       width: 442px;
     }
   }
-  .intro__img-wrapper {
+  .intro__wrapper {
     margin-bottom: 50px;
     padding-top: 75px;
     padding-bottom: 90px;
@@ -55,5 +64,8 @@
     margin-bottom: 30px;
     padding: 0;
     font-size: 21px;
+    &_big {
+      font-size: 30px;
+    }
   }
 }
