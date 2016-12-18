@@ -1,35 +1,42 @@
 .btn {
   cursor: pointer;
-  width: 280px;
-  padding: 18px 0 19px 0;
+  max-width: 280px;
+  padding: 18px 46px 19px 46px;
   border: none;
-  font-family: "ptsansbold", sans-serif;
+  font-family: "ptsansbold", "Arial", sans-serif;
   font-size: 21px;
   line-height: 21px;
   text-transform: uppercase;
   color: @color-white;
   background: @bg-blue;
   &_small {
-    width: 180px;
+    max-width: 180px;
+    padding: 18px 78px 19px 78px;    
   }
 }
 
 @media @tablet-widths {
   .btn {
-    width: 460px;
-    padding: 18px 0 15px 0;
+    max-width: 460px;
+    padding: 18px 136px 18px 136px;
     &_submit {
-      width: 324px;
+      max-width: 325px;
+      padding: 18px 76px 18px 64px;
     }
     &_small {
-      width: 275px;
+      max-width: 275px;
+      padding: 18px 123px 19px 123px;
     }
   }
 }
+
 @media @desktop-widths {
   .btn {
+    max-width: 460px;
+    padding: 20px 136px 20px 136px;
     &_submit {
-      width: 480px;
+      max-width: 480px;
+      padding: 18px 148px 19px 148px;
     }
   }
 }

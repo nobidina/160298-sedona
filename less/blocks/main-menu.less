@@ -25,14 +25,14 @@
 }
 .main-menu__toggle {
   position: absolute;
-  right: 20px;
-  top: 240px;
+  top: 239px;
+  right: 24px;
   cursor: pointer;
   width: 23px;
   height: 24px;
   border: none;
+  fill: @bg-blue;
   background: white;
-  background: url(../img/icon-menu.svg) no-repeat 0 1px;
 ////  &_close {
 //      top: 20px;
 //      right: 20px;
@@ -44,16 +44,17 @@
   .main-menu__list {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
   .main-menu__item {
-    &_margin-right {
-      margin-right: 208px;
+    &:nth-child(4n+2) {
+      margin-right: 156px;
     }
   }
   .main-menu__link {
-    width: 105px;
-    padding: 20px 0 25px 0;
+    width: 153px;
+    padding: 20px 0 19px 0;
+    text-align: center;
     font-size: 14px;
     color: @color-black;
     background: #fff;
@@ -65,9 +66,12 @@
 }
 
 @media @desktop-widths {
+    .main-menu__link {
+      width: 240px;
+    }
     .main-menu__item {
-    &_margin-right {
-      margin-right: 370px;
+    &:nth-child(4n+2) {
+      margin-right: 240px;
     }
   }
 }

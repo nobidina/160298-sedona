@@ -6,8 +6,9 @@
 }
 .main-footer__hashtag {
   margin-bottom: 36px;
-  font-family: "ptsansbold", sans-serif;
+  font-family: "ptsansbold", "Arial", sans-serif;
   font-size: 21px;
+  letter-spacing: 0;
   color: @color-black;
 }
 .main-footer__copyright-text {
@@ -21,8 +22,7 @@
   vertical-align: middle;
   width: 27px;
   height: 35px;
-  margin-right: -2px;
-  background: url(../../img/logo-htmlacademy.svg) no-repeat;
+  background: url(../../img/logo-htmlacademy.svg) no-repeat 0 1px;
 }
 
 @media @tablet-widths {
@@ -30,8 +30,28 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 37px;
   }
   .main-footer__hashtag {
     margin-bottom: 0;
+    line-height: 36px;
+  }
+  .main-footer__copyright-text {
+    line-height: 36px;
+  }
+}
+
+@media @desktop-widths {
+  .main-footer {
+    padding-bottom: 40px;
+    justify-content: flex-start;
+  }
+  .main-footer__hashtag {
+    margin-left: 132px;
+    margin-right: 255px;
+  }
+  .main-footer__copyright-text {
+    padding-top: 0;
+    letter-spacing: 0.4px;
   }
 }

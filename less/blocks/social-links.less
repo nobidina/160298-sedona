@@ -3,27 +3,39 @@
   margin: 0 auto 30px auto;
 }
 .social-links__item {
+  position: relative;
   display: inline-block;
   width: 46px;
   height: 48px;
-  &_tw {
-    background: url(../img/icon-twitter.svg) no-repeat 14px 17px,
-                @bg-blue;
-  }
-  &_fb {
-    width: 47px;
-    background: url(../img/icon-facebook.svg) no-repeat 20px 14px,
-                @bg-blue;
-  }
-  &_youtube {
-    margin-left: 2px;
-    background: url(../img/icon-youtube.svg) no-repeat 13px 17px,
-                @bg-blue;
-  }
+  background: @bg-blue;
+}
+.social-links__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  fill: @bg-white;
 }
 
 @media @tablet-widths {
   .social-links {
+    width: 152px;
     margin: 0;
+    line-height: 0;
+  }
+  .social-links__item {
+    margin-right: 2px;
+    &:last-child {
+    margin-right: 0;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .social-links {
+    margin-right: 350px;
   }
 }

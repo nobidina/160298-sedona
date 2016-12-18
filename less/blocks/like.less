@@ -1,26 +1,44 @@
 .like {
   display: flex;
-  align-items: baseline;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
   width: 70px;
 }
 .like__icon {
   width: 22px;
   height: 20px;
+  padding: 0;
   border: none;
-  margin-right: 13px;
+  margin-right: 14px;
   background-color: white;
-  background: url(../../img/icon-like.svg) no-repeat;
 }
 .like__text {
-  font-family: "ptsansbold", sans-serif;
-  line-height: 18px;
+  display: block;
+  font-family: "ptsansbold", "Arial", sans-serif;
+  line-height: 14px;
   color: @color-black;
 }
 
 @media @tablet-widths {
   .like {
-    margin-right: 20px;
+    flex-shrink: 0;
+    padding-right: 15px;
   }
+  .like__icon {
+    margin-right: 10px;
+    background-color: @bg-lightgrey;
+  }
+}
+
+@media @desktop-widths {
   .like__text {
+    color: @color-white;
+  }
+  .like__icon {
+    background: rgba(0, 0, 0, 0.3);
+  } 
+  .like__icon path {
+    fill: @bg-white;
   }
 }
