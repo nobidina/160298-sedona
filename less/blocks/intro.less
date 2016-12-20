@@ -4,14 +4,14 @@
 }
 .intro__wrapper {
   padding-top: 89px;
-  padding-bottom: 78px;
+  padding-bottom: 80px;
   text-align: center;
-  background: url(../img/bg-back-mobile@1x.jpg) no-repeat -225px -1px;
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat -225px -1px;
   background-size: cover;
   &_small {
     padding-top: 50px;
-    padding-bottom: 59px;
-    background: url(../img/bg-back-mobile@1x.jpg) no-repeat -225px -230px;
+    padding-bottom: 60px;
+    background: url("../img/bg-back-mobile@1x.jpg") no-repeat -225px -230px;
   }
 }
 
@@ -29,20 +29,20 @@
 
 .intro__content-wrapper {
   position: relative;
-  padding: 36px 20px 0 20px;
+  padding: 40px 20px 0 20px;
   &::before {
     content: "";
     position: absolute;
-    top: -26px;
-    left: 0;
+    top: -27px;
+    left: 0px;
     display: block;
     width: 320px;
     height: 27px;
-    background: url(../../img/bg-intro-triangle-mobile.svg) no-repeat;
+    background: url("../img/bg-intro-triangle-mobile.svg") no-repeat;
     background-size: 320px 27px;
   }
   &_triangle {
-    padding-bottom: 25px;
+    padding-bottom: 13px;
   }
   &_triangle::after {
     content: "";
@@ -52,28 +52,42 @@
     display: block;
     width: 320px;
     height: 37px;
-    background: url(../../img/bg-triangle.svg) no-repeat;
+    background: url("../img/bg-triangle.svg") no-repeat;
     background-size: 320px 37px;
+  }
+  &_small {
+    padding-top: 38px;
+  }
+  &_small::before {
+    top: -26px;
   }
 }
 .intro__title {
-  margin-bottom: 26px;
+  margin: 0 0 27px 0;
   padding: 0px 10px;
-  font-family: "ptsansbold", "Arial", sans-serif;
+  font-family: @font-bold;
   font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.15px;
   text-align: center;
   color: @color-black;
 }
 .intro__text {
+  line-height: 26px;
+  letter-spacing: 0.07px;
   text-align: center;
   &_small {
+    margin: 0;
     padding: 0 5px 27px 5px;
     line-height: 24px;
+    letter-spacing: 0;
   }
   &_padding {
-    padding: 0 2px 15px 3px;
+    padding: 0 2px 17px 3px;
   }
 }
+
+//Tablet
 
 @media @tablet-widths {
   .intro {
@@ -81,11 +95,11 @@
   }
   .intro__wrapper {
     padding-top: 75px;
-    padding-bottom: 80px;
-    background: url("../../img/bg-back-tablet@1x.jpg") no-repeat;
+    padding-bottom: 82px;
+    background: url("../img/bg-back-tablet@1x.jpg") no-repeat;
     &_small {
       padding-top: 93px;
-      padding-bottom: 105px;
+      padding-bottom: 109px;
       background: url("../img/bg-back-tablet@1x.jpg") no-repeat 0 -230px;
       background-size: cover;
     }
@@ -104,12 +118,12 @@
   }
 
   .intro__content-wrapper {
-    padding: 38px 140px 50px 140px;
+    padding: 50px 140px 36px 140px;
     &::before {
       top: -57px;
       width: 768px;
       height: 57px;
-      background: url(../../img/bg-intro-triangle-tablet.svg) no-repeat;
+      background: url("../img/bg-intro-triangle-tablet.svg") no-repeat;
       background-size: 768px 57px;
     }
     &::after {
@@ -117,10 +131,7 @@
     }
     &_small {
       padding: 75px 165px 44px 165px;
-      &::before {
-        top: -57px;
       }
-    }
   }
   .intro__img {
     width: 464px;
@@ -131,19 +142,23 @@
     }
   }
   .intro__title {
-    margin-bottom: 26px;
+    margin-bottom: 28px;
     padding: 0;
     font-size: 21px;
-    letter-spacing: 0.01em;
     &_big {
       font-size: 30px;
+      line-height: 26px;
       margin-bottom: 30px;
     }
   }
   .intro__text {
-    letter-spacing: 0.001;
+    &_padding {
+      padding: 0 0 17px 0;
+    }
   }
 }
+
+//Desktop
 
 @media @desktop-widths {
   .intro__wrapper {
@@ -168,26 +183,26 @@
   }
 
   .intro__content-wrapper {
-    padding: 38px 356px 50px 356px;
+    padding: 50px 356px 37px 356px;
     &::before {
       top: -57px;
       width: 1200px;
       height: 57px;
-      background: url(../../img/bg-intro-triangle-desktop.svg) no-repeat -1px 0;
-      background-size: 1201px 57px;
+      background: url("../img/bg-intro-triangle-desktop.svg") no-repeat -3px 0;
+      background-size: 1205px 57px;
     }
     &_small {
-      padding: 100px 379px 45px 379px;
-      &::before {
-        top: -65px;
-      }
+      padding: 105px 379px 45px 379px;
+    }
+    &_small::before {
+      top: -61px;
     }
   }
   .intro__title {
-    margin-bottom: 26px;
+    margin-bottom: 27px;
     &_big {
       font-size: 30px;
-      margin-bottom: 30px;
+      margin-bottom: 31px;
     }
   }
 }

@@ -10,7 +10,7 @@
   align-items: center;
   box-sizing: border-box;
   .content-container();
-  padding: 23px 23px 22px 25px;
+  padding: 23px 23px 22px 20px;
   background: @bg-lightgrey;
 }
 .video-block__progress-bar {
@@ -53,6 +53,8 @@
   }
 }
 
+//Tablet
+
 @media @tablet-widths {
   .video-block {
     .content-container();
@@ -66,14 +68,14 @@
     position: absolute;
     top: 408px;
     left: 0;
-    padding: 35px 41px 37px 35px;
+    padding: 35px 41px 37px 29px;
     background: rgba(0, 0, 0, 0.4);
   }
   .video-block__progress-bar {
     order: 2;
     position: static;
     width: 390px;
-    margin-right: 42px;
+    margin-right: 36px;
     padding: 0;
     background: none;
   }
@@ -86,7 +88,7 @@
   .video-block__btn {
     &_replay {
       order: 1;
-      margin-right: 37px;
+      margin-right: 43px;
     }
     &_subtitles {
       order: 3;
@@ -103,9 +105,11 @@
   }
 }
 
+//Desktop
+
 @media @desktop-widths {
   .video-block {
-    width: 800px;
+    width: 804px;
     margin: 0 auto;
   }
   .video-block__control {

@@ -1,27 +1,32 @@
 .btn {
   cursor: pointer;
   max-width: 280px;
-  padding: 18px 46px 19px 46px;
+  padding: 16px 46px 17px 46px;
   border: none;
-  font-family: "ptsansbold", "Arial", sans-serif;
+  font-family: @font-bold;
   font-size: 21px;
-  line-height: 21px;
+  line-height: 26px;
   text-transform: uppercase;
   color: @color-white;
   background: @bg-blue;
+  &_submit {
+    max-width: 320px;
+    padding: 16px 48px 17px 47px;
+  }
   &_small {
     max-width: 180px;
     padding: 18px 78px 19px 78px;
   }
+  
 }
 
 @media @tablet-widths {
   .btn {
     max-width: 460px;
-    padding: 18px 136px 18px 136px;
+    padding: 17px 136px 16px 136px;
     &_submit {
-      max-width: 325px;
-      padding: 18px 76px 18px 64px;
+      max-width: 322px;
+      padding: 17px 76px 17px 63px;
     }
     &_small {
       max-width: 275px;
@@ -33,10 +38,10 @@
 @media @desktop-widths {
   .btn {
     max-width: 460px;
-    padding: 20px 136px 20px 136px;
+    padding: 18px 136px 16px 137px;
     &_submit {
       max-width: 480px;
-      padding: 18px 148px 19px 148px;
+      padding: 16px 146px 16px 147px;
     }
   }
 }

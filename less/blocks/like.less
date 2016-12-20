@@ -11,32 +11,33 @@
   padding: 0;
   border: none;
   margin-right: 14px;
-  background-color: white;
+  background: none;
 }
 .like__text {
   display: block;
-  font-family: "ptsansbold", "Arial", sans-serif;
+  font-family: @font-bold;
   line-height: 14px;
   color: @color-black;
 }
 
+//Tablet
+
 @media @tablet-widths {
   .like {
     flex-shrink: 0;
+    margin-top: -4px;
     padding-right: 15px;
   }
   .like__icon {
     margin-right: 10px;
-    background-color: @bg-lightgrey;
   }
 }
+
+//Desktop
 
 @media @desktop-widths {
   .like__text {
     color: @color-white;
-  }
-  .like__icon {
-    background: rgba(0, 0, 0, 0.3);
   }
   .like__icon path {
     fill: @bg-white;

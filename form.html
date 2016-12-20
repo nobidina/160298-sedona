@@ -61,7 +61,7 @@
                 <h2 class="form__title  form__title_left">Представьтесь:</h2>
                 <div class="form__input-wrapper">
                   <label class="form__label" for="name">Имя*:</label>
-                  <input class="form__input  form__input_middle" type="text" name="name" value="Петр" placeholder="Петр" id="name">
+                  <input class="form__input  form__input_middle" type="text" name="name" placeholder="Петр" id="name">
                 </div>
                 <div class="form__input-wrapper">
                   <label class="form__label" for="last-name">Фамилия*:</label>
@@ -139,7 +139,7 @@
                 <h2 class="form__title  form__title_decor">Опишите свои эмоции:</h2>
                 <textarea class="form__textarea" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
                 <input class="btn  btn_submit" type="submit" value="Отправить отзыв">
-                <p class="form__tip"><sup>*</sup> &ndash; Обязательные поля</p>
+                <p class="form__tip">* &nbsp; &ndash; Обязательные поля</p>
               </div>
             </fieldset>
           </form>
@@ -173,7 +173,10 @@
           <a class="main-footer__copyright-logo" href="#"></a>
         </div>
       </footer>
-      <div class="popup">
+      
+<!--Что бы показать, нужно добавить класс popup_visible-->
+      
+      <div class="popup  popup_small">
         <div class="popup__content-wrapper">
           <p class="popup__title  popup__title_small">Что-то пошло не так!</p>
           <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
@@ -183,12 +186,15 @@
       <div class="popup  popup_big">
         <div class="popup__content-wrapper  popup__content-wrapper_big">
           <p class="popup__title">Ваш отзыв отправлен!</p>
-          <p class="popup__text  popup__text_margin">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+          <p class="popup__text  popup__text_margin  popup__text_big">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         </div>
         <div class="popup__btn-wrap">
           <button class="btn" type="button">Закрыть окно</button>
         </div>
       </div>
     </div>
+  <script src="js/picturefill.js"></script> 
+  <script src="js/svg4everybody.js">      </script> 
+  <script>svg4everybody(); // run it now or whenever you are ready</script>
   </body>
 </html>

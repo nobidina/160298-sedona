@@ -1,13 +1,20 @@
 .social-links {
-  width: 150px;
-  margin: 0 auto 30px auto;
+  width: 152px;
+  margin: 0 auto 25px auto;
 }
 .social-links__item {
   position: relative;
   display: inline-block;
   width: 46px;
   height: 48px;
+  margin-right: 2px;
   background: @bg-blue;
+  &:nth-child(2n+2) {
+    width: 47px;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
 }
 .social-links__icon {
   position: absolute;
@@ -20,10 +27,12 @@
   fill: @bg-white;
 }
 
+//////////Tablet
+
 @media @tablet-widths {
   .social-links {
-    width: 152px;
-    margin: 0;
+    width: 156px;
+    margin: 0 0 0 -8px;
     line-height: 0;
   }
   .social-links__item {
@@ -36,6 +45,7 @@
 
 @media @desktop-widths {
   .social-links {
+    margin-left: -2px;
     margin-right: 350px;
   }
 }

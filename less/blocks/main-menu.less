@@ -8,25 +8,26 @@
 }
 .main-menu__link {
   display: block;
-  padding: 19px 0;
-  font-family: "ptsansbold", sans-serif;
+  padding: 8px 0;
+  font-family: @font-bold;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 40px;
+  letter-spacing: 0.2px;
   text-align: center;
   text-decoration: none;
-  box-shadow: inset 0 1px 1px 0 #678fa8,
-              inset 0 -1px 1px 0 #9ac2db;
+  box-shadow: inset 0 -1px 1px 0 #678fa8,
+              inset 0 1px 1px 0 #9ac2db;
   color: @color-white;
   background: @bg-blue;
   &_shadows {
     box-shadow: inset 0 -2px 4px 0 #6d97b1,
-                inset 0 1px 1px 0 #678fa8;
+                inset 0 1px 1px 0 #9ac2db;
   }
 }
 .main-menu__toggle {
   position: absolute;
   top: 239px;
-  right: 24px;
+  right: 25px;
   cursor: pointer;
   width: 23px;
   height: 24px;
@@ -36,9 +37,11 @@
 ////  &_close {
 //      top: 20px;
 //      right: 20px;
-////    background: url(../../img/icon-cross.svg) no-repeat 0 1px;
+////    background: url("../img/icon-cross.svg") no-repeat 0 1px;
 ////  }
 }
+
+////////Tablet
 
 @media @tablet-widths {
   .main-menu__list {
@@ -48,14 +51,18 @@
   }
   .main-menu__item {
     &:nth-child(4n+2) {
-      margin-right: 156px;
+      margin-right: 157px;
+    }
+    &:nth-child(4n+4) {
+      margin-left: -4px;
     }
   }
   .main-menu__link {
-    width: 153px;
-    padding: 20px 0 19px 0;
+    width: 154px;
+    padding: 15px 0 16px 0;
     text-align: center;
     font-size: 14px;
+    line-height: 26px;
     color: @color-black;
     background: #fff;
     box-shadow: none;
@@ -65,13 +72,18 @@
   }
 }
 
+//Desktop
+
 @media @desktop-widths {
-    .main-menu__link {
-      width: 240px;
-    }
-    .main-menu__item {
+  .main-menu__link {
+    width: 239px;
+  }
+  .main-menu__item {
     &:nth-child(4n+2) {
-      margin-right: 240px;
+      margin-right: 243px;
+    }
+    &:nth-child(4n+4) {
+      margin-left: 0;
     }
   }
 }

@@ -1,5 +1,5 @@
 .video {
-  padding-bottom: 44px;
+  padding-bottom: 43px;
   text-align: center;
   background: @bg-white;
 }
@@ -7,9 +7,10 @@
   .content-container();
 }
 .video__title {
-  margin-bottom: 25px;
-  font-family: "ptsansbold", "Arial", sans-serif;
+  margin: 0 0 26px 0;
+  font-family: @font-bold;
   font-size: 18px;
+  line-height: 26px;
   color: @color-black;
 }
 .video__text {
@@ -21,7 +22,7 @@
 
 @media @tablet-widths {
   .video {
-    padding-bottom: 40px;
+    padding-bottom: 42px;
   }
   .video__content-wrapper {
     width: 450px;
@@ -36,6 +37,9 @@
 }
 
 @media @desktop-widths {
+  .video__title {
+    margin-bottom: 29px;
+  }
   .video {
     padding-bottom: 85px;
   }
