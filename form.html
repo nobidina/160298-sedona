@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -23,18 +24,30 @@
               <a class="main-menu__link  main-menu__link_shadows" href="#">HTML Academy</a>
             </li>
           </ul>
-          <button class="main-menu__toggle  main-menu__toggle_close" type="button"></button>
+          <button class="main-menu__toggle  main-menu__toggle_close" type="button">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve">
+              <g>
+                <rect width="22.928" height="3.964"/>
+                <rect y="9.009" width="22.928" height="3.964"/>
+                <rect y="18.018" width="22.928" height="3.964"/>
+              </g>
+            </svg>
+          </button>
         </nav>
         <div class="main-header__logo">
           <a href="index.html">
-            <img src="img/logo-sedona-mobile.svg" width="100" height="85" alt="City of Sedona">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img src="img/logo-sedona-mobile.svg" width="100" height="85" alt="City of Sedona">
+            </picture>
           </a>
         </div>
       </header>
       <main class="main-page">
         <section class="intro">
           <div class="intro__wrapper  intro__wrapper_small">
-            <img class="intro__img" src="img/text-sedona.svg" width="230" height="40" alt="Sedona">
+            <img class="intro__img  intro__img_small" src="img/text-sedona.svg" width="230" height="40" alt="Sedona">
           </div>
           <div class="intro__content-wrapper  intro__content-wrapper_small">
             <h1 class="intro__title  intro__title_big">Оставьте свой отзыв</h1>
@@ -47,15 +60,15 @@
               <div class="form__content-wrapper  form__content-wrapper_small">
                 <h2 class="form__title  form__title_left">Представьтесь:</h2>
                 <div class="form__input-wrapper">
-                  <label class="form__label" for="name">Имя<sup>*</sup>:</label>
-                  <input class="form__input  form__input_middle" type="text" name="name" value="Петр" placeholder="Петр" id="name">
+                  <label class="form__label" for="name">Имя*:</label>
+                  <input class="form__input  form__input_middle" type="text" name="name" placeholder="Петр" id="name">
                 </div>
                 <div class="form__input-wrapper">
-                  <label class="form__label" for="last-name">Фамилия<sup>*</sup>:</label>
+                  <label class="form__label" for="last-name">Фамилия*:</label>
                   <input class="form__input" type="text" name="last-name" placeholder="Иванов" id="last-name">
                 </div>
                 <div class="form__input-wrapper">
-                  <label class="form__label" for="middle-name">Отчество<sup>*</sup>:</label>
+                  <label class="form__label" for="middle-name">Отчество*:</label>
                   <input class="form__input  form__input_margin" type="text" name="middle-name" placeholder="Александрович" id="middle-name">
                 </div>
               </div>
@@ -63,23 +76,27 @@
             <fieldset class="form__group">
               <div class="form__content-wrapper">
                 <h2 class="form__title  form__title_decor">Контактная информация:</h2>
-                <label class="form__label  form__label_margin" for="phone">
-                  <span class="form__text-hidden">Контактный</span>
-                  телефон<sup>*</sup>:
-                  <span class="form__icon"></span>
-                </label>
-                <input class="form__input  form__input_big" type="tel" name="phone" pattern="7-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Введите телефон" id="phone">
-                <p class="form__error">Ошибка, перепроверьте номер</p>
-                <label class="form__label  form__label_margin" for="email">
-                  Электронная почта<sup>*</sup>:
-                  <span class="form__icon  form__icon_img-email"></span>
-                </label>
-                <input class="form__input  form__input_big  form__input_margin" type="email" name="email" placeholder="Введите e-mail" id="email">
+                <div class="form__phone-wrapper">
+                  <label class="form__label  form__label_margin" for="phone">
+                    <span class="form__text-hidden">Контактный</span>
+                    телефон*:
+                    <span class="form__icon"></span>
+                  </label>
+                  <input class="form__input  form__input_big" type="tel" name="phone" pattern="7-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Введите телефон" id="phone">
+                  <p class="form__error">Ошибка, перепроверьте номер</p>
+                </div>
+                <div class="form__email-wrapper">
+                  <label class="form__label  form__label_margin" for="email">
+                    Электронная почта*:
+                    <span class="form__icon  form__icon_img-email"></span>
+                  </label>
+                  <input class="form__input  form__input_big  form__input_margin" type="email" name="email" placeholder="Введите e-mail" id="email">
+                </div>
               </div>
             </fieldset>
             <fieldset class="form__group  form__group_order1">
-              <div class="form__content-wrapper  form__content-wrapper_small">
-                <h2 class="form__title  form__title_left">Ваше общее впечатление:</h2>
+              <div class="form__content-wrapper  form__content-wrapper_middle">
+                <h2 class="form__title  form__title_left  form__title_margin-left">Ваше общее впечатление:</h2>
                 <div class="form__radio-wrapper">
                   <input class="form__radio" type="radio" name="impression" value="positive" checked id="positive">
                   <label class="form__label  form__label_radio  form__label_strong" for="positive">Скорее положительное</label>
@@ -96,22 +113,24 @@
             </fieldset>
             <fieldset class="form__group">
               <div class="form__content-wrapper">
-                <h2 class="form__title  form__title_decor">Посещенные достопримечательности:</h2>
-                <div class="form__checkbox-wrapper  form__checkbox-wrapper_1">
-                  <input class="form__checkbox" type="checkbox" name="devils-bridge" checked id="devils-bridge">
-                  <label class="form__label  form__label_strong  form__label_checkbox" for="devils-bridge">Мост Дьявола</label>
-                </div>
-                <div class="form__checkbox-wrapper  form__checkbox-wrapper_2">
-                  <input class="form__checkbox" type="checkbox" name="slide-park" checked id="slide-park">
-                  <label class="form__label  form__label_strong  form__label_checkbox" for="slide-park">Слайд-парк</label>
-                </div>
-                <div class="form__checkbox-wrapper  form__checkbox-wrapper_3">
-                  <input class="form__checkbox" type="checkbox" name="mountain-bell" id="mountain-bell">
-                  <label class="form__label  form__label_strong  form__label_checkbox" for="mountain-bell">Гора-Колокол</label>
-                </div>
-                <div class="form__checkbox-wrapper  form__checkbox-wrapper_4">
-                  <input class="form__checkbox" type="checkbox" name="red-rocks" checked id="red-rocks">
-                  <label class="form__label  form__label_strong  form__label_checkbox" for="red-rocks">Красные скалы</label>
+                <h2 class="form__title  form__title_decor  form__title_margin">Посещенные достопримечательности:</h2>
+                <div class="form__checkbox-main-wrapper">
+                  <div class="form__checkbox-wrapper">
+                    <input class="form__checkbox" type="checkbox" name="devils-bridge" checked id="devils-bridge">
+                    <label class="form__label  form__label_strong  form__label_checkbox" for="devils-bridge">Мост Дьявола</label>
+                  </div>
+                  <div class="form__checkbox-wrapper">
+                    <input class="form__checkbox" type="checkbox" name="slide-park" checked id="slide-park">
+                    <label class="form__label  form__label_strong  form__label_checkbox" for="slide-park">Слайд-парк</label>
+                  </div>
+                  <div class="form__checkbox-wrapper">
+                    <input class="form__checkbox" type="checkbox" name="mountain-bell" id="mountain-bell">
+                    <label class="form__label  form__label_strong  form__label_checkbox" for="mountain-bell">Гора-Колокол</label>
+                  </div>
+                  <div class="form__checkbox-wrapper">
+                    <input class="form__checkbox" type="checkbox" name="red-rocks" checked id="red-rocks">
+                    <label class="form__label  form__label_strong  form__label_checkbox" for="red-rocks">Красные скалы</label>
+                  </div>
                 </div>
               </div>
             </fieldset>
@@ -120,7 +139,7 @@
                 <h2 class="form__title  form__title_decor">Опишите свои эмоции:</h2>
                 <textarea class="form__textarea" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
                 <input class="btn  btn_submit" type="submit" value="Отправить отзыв">
-                <p class="form__tip"><sup>*</sup> &mdash; Обязательные поля</p>
+                <p class="form__tip">* &nbsp; &ndash; Обязательные поля</p>
               </div>
             </fieldset>
           </form>
@@ -129,16 +148,35 @@
       <footer class="main-footer">
         <p class="main-footer__hashtag">#visitsedona</p>
         <div class="social-links">
-          <a class="social-links__item  social-links__item_tw" href="#"></a>
-          <a class="social-links__item  social-links__item_fb" href="#"></a>
-          <a class="social-links__item  social-links__item_youtube" href="#"></a>
+          <a class="social-links__item" href="#">
+            <svg class="social-links__icon" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+              <g id="W6EeEF_1_">
+                <g>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z"/>
+                </g>
+              </g>
+            </svg>
+          </a>
+          <a class="social-links__item" href="#">
+            <svg class="social-links__icon" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+              <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
+            </svg>
+          </a>
+          <a class="social-links__item" href="#">
+            <svg class="social-links__icon" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+              <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
+            </svg>
+          </a>
         </div>
         <div class="main-footer__copyright">
           <p class="main-footer__copyright-text">Разработано</p>
           <a class="main-footer__copyright-logo" href="#"></a>
         </div>
       </footer>
-      <div class="popup">
+
+<!--Что бы показать, нужно добавить класс popup_visible-->
+
+      <div class="popup  popup_small">
         <div class="popup__content-wrapper">
           <p class="popup__title  popup__title_small">Что-то пошло не так!</p>
           <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
@@ -148,12 +186,15 @@
       <div class="popup  popup_big">
         <div class="popup__content-wrapper  popup__content-wrapper_big">
           <p class="popup__title">Ваш отзыв отправлен!</p>
-          <p class="popup__text  popup__text_margin">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+          <p class="popup__text  popup__text_margin  popup__text_big">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         </div>
         <div class="popup__btn-wrap">
           <button class="btn" type="button">Закрыть окно</button>
         </div>
       </div>
     </div>
+  <script src="js/picturefill.js"></script>
+  <script src="js/svg4everybody.js"></script>
+  <script>svg4everybody(); // run it now or whenever you are ready</script>
   </body>
 </html>

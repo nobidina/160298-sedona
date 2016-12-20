@@ -1,37 +1,63 @@
 .main-footer {
-  padding-top: 34px;
+  padding-top: 35px;
   padding-bottom: 20px;
   text-align: center;
   background: @bg-white;
 }
 .main-footer__hashtag {
+  margin: 0;
   margin-bottom: 36px;
-  font-family: "ptsansbold", sans-serif;
+  font-family: @font-bold;
   font-size: 21px;
+  line-height: 26px;
+  letter-spacing: 0;
   color: @color-black;
 }
 .main-footer__copyright-text {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
-  padding-top: 3px;
+  line-height: 26px;
 }
 .main-footer__copyright-logo {
   display: inline-block;
   vertical-align: middle;
   width: 27px;
   height: 35px;
-  margin-right: -2px;
-  background: url(../../img/logo-htmlacademy.svg) no-repeat;
+  background: url("../img/logo-htmlacademy.svg") no-repeat 0 1px;
 }
+
+///////////////Tablet
 
 @media @tablet-widths {
   .main-footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 27px;
+    padding-bottom: 30px;
   }
   .main-footer__hashtag {
     margin-bottom: 0;
+    line-height: 26px;
+  }
+  .main-footer__copyright-text {
+    line-height: 36px;
+  }
+}
+
+@media @desktop-widths {
+  .main-footer {
+    padding-bottom: 40px;
+    justify-content: flex-start;
+  }
+  .main-footer__hashtag {
+    margin-left: 132px;
+    margin-right: 255px;
+  }
+  .main-footer__copyright-text {
+    padding-top: 0;
+    margin-right: 4px;
+    letter-spacing: 0.4px;
   }
 }

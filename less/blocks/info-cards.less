@@ -1,78 +1,70 @@
 .info-cards {
-  padding-bottom: 10px;
   .content-container();
   text-align: left;
+  padding-bottom: 10px;
 }
 .info-cards__item {
   position: relative;
-  margin-bottom: 29px;
-  &::before {
-    content: "";
-    display: block;
-    width: 38px;
-    height: 38px;
-    position: absolute;
-    top: -11px;
-    left: 0;
-    background: url(../../img/icon-house.svg) no-repeat;
-    background-size: 100% 100%;
-  }
-  &_img-gift::before {
-    background: url(../../img/icon-gift.svg) no-repeat;
-    background-size: 100% 100%;
-  }
-  &_img-burger::before {
-    top: -8px;
-    background: url(../../img/icon-burger.svg) no-repeat;
-    background-size: 100% 100%;
+  margin-bottom: 28px;
+}
+.info-cards__icon {
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  top: -9px;
+  left: 3px;
+  fill: @bg-blue;
+  &_burger {
+    top: -6px;
+    left: -1px;
   }
 }
 .info-cards__title {
   margin-left: 50px;
-  margin-bottom: 12px;
-  font-family: "ptsansbold", sans-serif;
+  margin-bottom: 14px;
+  font-family: @font-bold;
   font-size: 18px;
+  line-height: 26px;
   color: @color-black;
 }
 .info-cards__text {
   margin-left: 50px;
-  line-height: 21px;
 }
+.info-cards__text br{
+  display: none;
+}
+
+/////////Tablet
+
 @media @tablet-widths {
   .info-cards {
-    width: 768px;
-    padding-top: 55px;
     display: flex;
     justify-content: space-around;
+    width: 768px;
+    padding-top: 59px;
   }
   .info-cards__item {
-    width: 170px;
-    margin-bottom: 60px;
-    &::before {
-      content: "";
-      display: block;
-      width: 78px;
-      height: 76px;
-      position: absolute;
-      top: 0;
-      left: 45px;
-      background: url(../../img/icon-house.svg) no-repeat;
-      background-size: 100% 100%;
-    }
-    &_img-gift::before {
-      background: url(../../img/icon-gift.svg) no-repeat;
-      background-size: 100% 100%;
-    }
-    &_img-burger::before {
-      background: url(../../img/icon-burger.svg) no-repeat;
-      background-size: 100% 100%;
+    width: 158px;
+    margin-bottom: 38px;
+    &_gift {
+      width: 162px;
+      order: 2;
     }
   }
+  .info-cards__icon {
+    width: 78px;
+    height: 76px;
+    position: absolute;
+    top: -1px;
+    left: 40px;
+  }
   .info-cards__title {
-    margin-top: 105px;
+    margin-top: 100px;
     margin-left: 0px;
+    margin-bottom: 20px;
     text-align: center;
     font-size: 21px;
+    letter-spacing: 0;
   }
   .info-cards__text {
     margin-left: 0;
@@ -80,21 +72,20 @@
   }
 }
 
+//Desktop
+
 @media @desktop-widths {
   .info-cards {
     width: 1200px;
   }
   .info-cards__item {
     width: 290px;
-    margin-bottom: 80px;
-    &::before {
-      left: 106px;
-    }
-    &_img-gift::before {
-      left: 106px;
-    }
-    &_img-burger::before {
-      left: 106px;
-    }
+    margin-bottom: 59px;
+  }
+  .info-cards__icon {
+    left: 104px;
+  }
+  .info-cards__text br{
+    display: inline;
   }
 }
