@@ -2,6 +2,10 @@
   position: relative;
 }
 .main-menu__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 3;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -25,20 +29,21 @@
   }
 }
 .main-menu__toggle {
+  z-index: 4;
   position: absolute;
   top: 239px;
   right: 25px;
   cursor: pointer;
+  outline: none;
   width: 23px;
   height: 24px;
+  padding: 0;
   border: none;
-  fill: @bg-blue;
-  background: white;
-////  &_close {
-//      top: 20px;
-//      right: 20px;
-////    background: url("../img/icon-cross.svg") no-repeat 0 1px;
-////  }
+  background: none;
+  background: url("../img/icon-menu.svg") no-repeat 0 1px;  
+  &_close {
+    background: url("../img/icon-cross.svg") no-repeat 0 1px;
+  }
 }
 
 ////////Tablet

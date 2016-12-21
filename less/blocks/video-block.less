@@ -40,8 +40,10 @@
 }
 .video-block__btn {
   cursor: pointer;
+  outline: none;
   width: 20px;
   height: 20px;
+  padding: 0;
   border: none;
   background: none;
   &_replay {
@@ -65,6 +67,7 @@
     height: 500px;
   }
   .video-block__control {
+    flex-wrap: nowrap;
     position: absolute;
     top: 408px;
     left: 0;

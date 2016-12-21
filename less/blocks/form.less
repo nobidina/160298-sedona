@@ -88,11 +88,12 @@
 .form__input-wrapper {
   display: flex;
   align-items: baseline;
+  width: 100%;
 }
 .form__input {
+  min-width: 0;
+  flex: 1 1 100px;
   box-sizing: border-box;
-  width: 100%;
-  flex: 1;
   margin-left: 14px;
   margin-bottom: 20px;
   padding: 19px 20px;
@@ -102,13 +103,15 @@
   line-height: 21px;
   background: @bg-lightgrey;
   &_middle {
-    width: 100%;
+    min-width: 0;
+    flex: 1 1 100px;
   }
   &_big {
     width: 280px;
     max-height: 58px;
     margin-left: 0;
     margin-bottom: -10px;
+    padding: 19px 80px 19px 20px;
   }
   &_margin {
     margin-bottom: 0;
@@ -122,6 +125,7 @@ input::-webkit-input-placeholder {
   color: @color-black;
 }
 input::-moz-placeholder {
+  opacity: 1;
   font-family: @font-bold;
   font-size: 18px;
   line-height: 21px;
@@ -129,6 +133,7 @@ input::-moz-placeholder {
   color: @color-black;
 }
 input:-moz-placeholder {
+  opacity: 1;
   font-family: @font-bold;
   font-size: 18px;
   line-height: 21px;
@@ -212,12 +217,17 @@ textarea::-webkit-input-placeholder {
   color: @color-black;
 }
 textarea::-moz-placeholder {
+  opacity: 1;
+  line-height: 25px;
   color: @color-black;
 }
 textarea:-moz-placeholder {
+  opacity: 1;
+  line-height: 25px;
   color: @color-black;
 }
 textarea:-ms-input-placeholder {
+  line-height: 25px;
   color: @color-black;
 }
 .form__tip {
