@@ -21,4 +21,3 @@ function initMap() {
     title: 'Sedona'
   });
 }
-
