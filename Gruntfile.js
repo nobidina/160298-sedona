@@ -1,8 +1,8 @@
 "use strict";
 
 module.exports = function(grunt) {
-  
-  require("load-grunt-tasks")(grunt);  
+
+  require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
     less: {
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
         tasks: ["less", "postcss"]
       }
     },
-  
+
     csso: {
       style: {
         options: {
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
     imagemin: {
       images: {
         options: {
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
         }]
       }
     },
-    
+
     svgmin: {
       symbols: {
         files: [{
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
         }]
       }
     },
-    
+
      svgstore: {
        options: {
          svg: {
@@ -96,7 +96,7 @@ module.exports = function(grunt) {
          }
        }
      },
-    
+
     copy: {
       build: {
         files: [{
@@ -111,7 +111,7 @@ module.exports = function(grunt) {
         }]
       }
     },
-    
+
     clean: {
       build: ["build"]
     }
