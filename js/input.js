@@ -12,6 +12,7 @@
   }
 
   onResize();
-  
+
   window.addEventListener('resize', onResize);
 })();
+

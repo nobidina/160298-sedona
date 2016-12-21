@@ -2,7 +2,7 @@
   var menu = {
     elem: document.querySelector('.main-menu__list'),
     button: document.querySelector('.main-menu__toggle'),
-    isOpened: false,  
+    isOpened: false,
 
     open: function() {
       var btnClasses = this.button.classList;
@@ -22,7 +22,7 @@
 
     init: function() {
       var self = this;
-      
+
       this.elem.style.position = 'absolute';
       this.elem.style.display = 'none';
       this.button.style.top = '16px';
@@ -34,7 +34,7 @@
           self.close();
       };
     },
-    
+
     off: function() {
       this.elem.style.position = 'static';
       this.elem.style.display = 'flex';
@@ -43,15 +43,15 @@
     }
   };
 
-  
   function onResize() {
     if (window.innerWidth < 768)
       menu.init();
     else
       menu.off();
   }
-  
+
   onResize();
-  
+
   window.addEventListener('resize', onResize);
 })();
+
