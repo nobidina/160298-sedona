@@ -1,3 +1,14 @@
+@keyframes colorchange {
+   0% {
+     background: #5496bd;
+   }
+   50% {
+     background: #3e84ae;
+   }
+   100% {
+     background: #5496bd;
+   }
+}
 .btn {
   cursor: pointer;
   max-width: 280px;
@@ -17,6 +28,21 @@
     max-width: 180px;
     padding: 18px 78px 19px 78px;
   }
+  &:hover {
+    background-color: #669ec0;
+  }
+  &:active {
+    color: #94b9d2;
+    background-color: #5496bd;
+  }
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+  &_inprogress {
+    animation-name: colorchange;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+  }  
 }
 
 @media @tablet-widths {

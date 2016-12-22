@@ -27,12 +27,18 @@
     box-shadow: inset 0 -2px 4px 0 #6d97b1,
                 inset 0 1px 1px 0 #9ac2db;
   }
+  &:hover {
+    background: #669ec0;
+  } 
+  &:active {
+    background: #5496bd;
+    color: #94b9d2;
+  }
 }
 .main-menu__toggle {
   z-index: 4;
   position: absolute;
-  top: 239px;
-  right: 25px;
+  right: 21px;
   cursor: pointer;
   outline: none;
   width: 23px;
@@ -40,13 +46,14 @@
   padding: 0;
   border: none;
   background: none;
-  background: url("../img/icon-menu.svg") no-repeat 0 1px;
+  background: url("../img/icons/icon-menu.svg") no-repeat 0 0;
+  background-size: 100% 100%;
   &_close {
-    background: url("../img/icon-cross.svg") no-repeat 0 1px;
+    background: url("../img/icons/icon-cross.svg") no-repeat 0 1px;
   }
 }
 
-////////Tablet
+//Tablet
 
 @media @tablet-widths {
   .main-menu__list {
@@ -71,6 +78,22 @@
     color: @color-black;
     background: #fff;
     box-shadow: none;
+    &:hover {
+      color: #81b3d2;
+      background: none;
+    }
+    &:active {
+      color: #cacaca;
+    }
+    &_active {
+      color: #766357;
+    }
+    &_active:hover {
+      color: #604e43;
+    }
+    &_active:active {
+      color: #dbd8d5;
+    }
   }
   .main-menu__toggle {
     display: none;

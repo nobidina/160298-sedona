@@ -30,7 +30,7 @@
     display: block;
     margin-top: -1px;
     margin-left: 21px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
   &_strong {
     font-family: @font-bold;
@@ -49,6 +49,12 @@
     border-radius: 50%;
     background: @bg-lightgrey;
   }
+  &_radio:hover:before {
+    background: #e5e5e5;
+  }
+  &_radio:active:before {
+    background-color: #d5d5d5;
+  }
   &_radio::after {
     content: "";
     display: none;
@@ -59,6 +65,9 @@
     height: 22px;
     border-radius: 50%;
     background: #333;
+  }
+  &_radio:active:after {
+    background-color: #a4a4a4;
   }
   &_checkbox::before {
     content: "";
@@ -71,6 +80,12 @@
     border-radius: 4px;
     background: @bg-lightgrey;
   }
+  &_checkbox:hover:before {
+    background-color: #e5e5e5;
+  }
+  &_checkbox:active:before {
+    background-color: #d5d5d5;
+  }
   &_checkbox::after {
     content: "";
     display: none;
@@ -81,8 +96,8 @@
     height: 16px;
     background: url("../img/icon-tick.svg") no-repeat;
   }
-  &_margin {
-    margin-bottom: 9px;
+  &_checkbox:active:after {
+    background: url("../img/icon-tick-hover.svg") no-repeat;
   }
 }
 .form__input-wrapper {
@@ -90,12 +105,16 @@
   align-items: baseline;
   width: 100%;
 }
+.form__phone-wrapper {
+  margin-bottom: 15px;
+}
 .form__input {
+  outline: none;
   min-width: 0;
   flex: 1 1 100px;
   box-sizing: border-box;
   margin-left: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   padding: 19px 20px;
   border: none;
   font-family: @font-bold;
@@ -110,11 +129,18 @@
     width: 280px;
     max-height: 58px;
     margin-left: 0;
-    margin-bottom: -10px;
+    margin-bottom: -6px;
     padding: 19px 80px 19px 20px;
   }
   &_margin {
     margin-bottom: 0;
+  }
+  &:hover {
+    background-color: #e5e5e5;
+  }
+  &:focus {
+    box-shadow: inset 0 0 0 4px #e5e5e5;
+    background: none;
   }
 }
 input::-webkit-input-placeholder {
@@ -149,24 +175,29 @@ input:-ms-input-placeholder {
 }
 .form__icon {
   position: absolute;
-  top: 35px;
+  top: 32px;
   left: 201px;
   display: block;
   width: 58px;
   height: 58px;
-  background: url("../img/icon-phone.svg") no-repeat 21px 20px,
+  background: url("../img/icons/icon-phone.svg") no-repeat 21px 20px,
               #e6e6e6;
   &_img-email {
-    background: url("../img/icon-mail.svg") no-repeat 21px 22px,
+    background: url("../img/icons/icon-mail.svg") no-repeat 21px 22px,
               #e6e6e6;
   }
 }
 .form__error {
+  display: none;
+  margin: 0;
+  margin-top: 11px;
   margin-left: 20px;
-  margin-bottom: 12px;
   line-height: 26px;
   text-transform: none;
   color: #ff5c5c;
+  &_visible {
+    display: block;
+  }
 }
 .form__radio-wrapper {
   margin-left: 78px;
@@ -200,8 +231,11 @@ input:-ms-input-placeholder {
   }
 }
 .form__textarea {
+  outline: none;
   box-sizing: border-box;
   width: 280px;
+  height: 160px;
+  overflow: hidden;
   margin-top: -2px;
   margin-bottom: 50px;
   padding: 16px 18px 105px 19px;
@@ -267,17 +301,20 @@ textarea:-ms-input-placeholder {
       margin: 0;
     }
     &_middle {
-      width: 274px;
+      width: 280px;
       margin: 0;
     }
+  }
+  .form__phone-wrapper {
+    margin-bottom: 2px;
   }
   .form__title {
     position: relative;
     text-align: center;
     width: 648px;
     margin: 15px 0 24px 0;
-    padding-left: 185px;
-    padding-right: 185px;
+    padding-left: 180px;
+    padding-right: 180px;
     font-size: 21px;
     letter-spacing: 0;
     &_decor::before {
@@ -302,7 +339,7 @@ textarea:-ms-input-placeholder {
     }
     &_left {
       text-align: left;
-      margin-top: 11px;
+      margin-top: 14px;
       margin-bottom: 56px;
       padding: 0;
     }
@@ -325,8 +362,8 @@ textarea:-ms-input-placeholder {
     }
   }
   .form__icon {
-    top: 35px;
-    left: 569px;
+    top: 32px;
+    left: 568px;
   }
   .form__error {
     position: absolute;
@@ -395,7 +432,7 @@ textarea:-ms-input-placeholder {
     justify-content: space-between;
     align-items: baseline;
     width: 400px;
-    margin-right: 55px;
+    margin-right: 57px;
   }
   .form__email-wrapper {
     display: flex;
@@ -449,7 +486,7 @@ textarea:-ms-input-placeholder {
       margin-left: 75px;
     }
     &_margin {
-      margin-bottom: 42px;
+      margin-bottom: 44px;
     }
   }
   .form__text-hidden {
@@ -459,9 +496,9 @@ textarea:-ms-input-placeholder {
     width: 57px;
     height: 57px;
     top: -16px;
-    left: 343px;
+    left: 342px;
     &_img-email {
-      left: 423px;
+      left: 422px;
     }
   }
   .form__error {

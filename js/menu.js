@@ -23,7 +23,6 @@
     init: function() {
       var self = this;
 
-      this.elem.style.position = 'absolute';
       this.elem.style.display = 'none';
       this.button.style.top = '16px';
 
@@ -36,7 +35,6 @@
     },
 
     off: function() {
-      this.elem.style.position = 'static';
       this.elem.style.display = 'flex';
 
       this.button.onclick = null;

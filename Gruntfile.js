@@ -35,7 +35,7 @@ module.exports = function(grunt) {
           ]
         },
         options: {
-          server: ".",
+          server: "build",
           watchTask: true,
           notify: false,
           open: true,
@@ -49,6 +49,10 @@ module.exports = function(grunt) {
       style: {
         files: ["less/**/*.less"],
         tasks: ["less", "postcss"]
+      },
+      html_js: {
+        files: ["*.html", "js/**"],
+        tasks: ["copy"]
       }
     },
 

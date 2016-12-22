@@ -20,4 +20,8 @@ function initMap() {
     },
     title: 'Sedona'
   });
+  
+  window.addEventListener('resize', function() {
+    map.setCenter(coords);
+  });
 }
