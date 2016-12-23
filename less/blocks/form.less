@@ -99,6 +99,21 @@
   &_checkbox:active:after {
     background: url("../img/icon-tick-hover.svg") no-repeat;
   }
+  &_disabled-radio::after {
+    background: @bg-lightgrey;
+  }
+  &_disabled-radio:hover:after {
+    background: #e5e5e5;
+  }
+  &_disabled-radio:active:after {
+    background: #d5d5d5;
+  }
+  &_disabled-checkbox::after {
+    background: none;
+  }
+  &_disabled-checkbox:active:after {
+    background: none;
+  }
 }
 .form__input-wrapper {
   display: flex;

@@ -99,9 +99,10 @@
             <fieldset class="form__group  form__group_order1">
               <div class="form__content-wrapper  form__content-wrapper_middle">
                 <h2 class="form__title  form__title_left  form__title_margin-left">Ваше общее впечатление:</h2>
+<!--Чтобы задать кнопке состояние disabled, нужно для label добавить класс form__label_disabled-radio-->
                 <div class="form__radio-wrapper">
                   <input class="form__radio" type="radio" name="impression" value="positive" checked id="positive">
-                  <label class="form__label  form__label_radio  form__label_strong" for="positive">Скорее положительное</label>
+                  <label class="form__label form__label_radio  form__label_strong" for="positive">Скорее положительное</label>
                 </div>
                 <div class="form__radio-wrapper">
                   <input class="form__radio" type="radio" name="impression" value="negative" id="negative">
@@ -117,6 +118,7 @@
               <div class="form__content-wrapper">
                 <h2 class="form__title  form__title_decor  form__title_margin">Посещенные достопримечательности:</h2>
                 <div class="form__checkbox-main-wrapper">
+<!--Чтобы задать кнопке состояние disabled, нужно для label добавить класс form__label_disabled-checkbox-->
                   <div class="form__checkbox-wrapper">
                     <input class="form__checkbox" type="checkbox" name="devils-bridge" checked id="devils-bridge">
                     <label class="form__label  form__label_strong  form__label_checkbox" for="devils-bridge">Мост Дьявола</label>
@@ -183,7 +185,9 @@
         <div class="popup__content-wrapper">
           <p class="popup__title  popup__title_small">Что-то пошло не так!</p>
           <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-          <button class="btn  btn_small" type="button">ok</button>
+          <form action="form.html">
+            <button class="btn  btn_small" type="submit">ok</button>
+          </form>
         </div>
       </div>
       <div class="popup  popup_big">
@@ -192,7 +196,9 @@
           <p class="popup__text  popup__text_margin  popup__text_big">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         </div>
         <div class="popup__btn-wrap">
-          <button class="btn" type="button">Закрыть окно</button>
+          <form action="form.html">
+            <button class="btn" type="submit">Закрыть окно</button>
+          </form>
         </div>
       </div>
     </div>
