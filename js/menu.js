@@ -8,7 +8,7 @@
       var btnClasses = this.button.classList;
       btnClasses.add('main-menu__toggle_close');
 
-      this.elem.style.display = 'flex';
+      this.elem.classList.remove('main-menu__list_hidden');
       this.isOpened = true;
     },
 
@@ -16,15 +16,15 @@
       var btnClasses = this.button.classList;
       btnClasses.remove('main-menu__toggle_close');
 
-      this.elem.style.display = 'none';
+      this.elem.classList.add('main-menu__list_hidden');
       this.isOpened = false;
     },
 
     init: function() {
       var self = this;
 
-      this.elem.style.display = 'none';
-      this.button.style.top = '16px';
+      this.elem.classList.add('main-menu__list_hidden');
+      this.button.classList.remove('no-js');
 
       this.button.onclick = function() {
         if (!self.isOpened)
@@ -35,7 +35,7 @@
     },
 
     off: function() {
-      this.elem.style.display = 'flex';
+      this.button.classList.remove('no-js');
 
       this.button.onclick = null;
     }
