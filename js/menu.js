@@ -24,7 +24,7 @@
       var self = this;
 
       this.elem.classList.add('main-menu__list_hidden');
-      this.button.classList.remove('no-js');
+      this.button.classList.remove('main-menu__toggle_no-js');
 
       this.button.onclick = function() {
         if (!self.isOpened)
@@ -35,7 +35,7 @@
     },
 
     off: function() {
-      this.button.classList.remove('no-js');
+      this.button.classList.remove('main-menu__toggle_no-js');
 
       this.button.onclick = null;
     }
