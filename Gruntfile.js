@@ -106,7 +106,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: [
-            "fonts/**/*.{woff, woff2}",
+            "fonts/**/*.{woff,woff2}",
             "img/**",
             "js/**",
             "*.html"
@@ -119,7 +119,7 @@ module.exports = function(grunt) {
     clean: {
       build: ["build"]
     },
-    
+
     'gh-pages': {
       options: {
         base: 'build' ,
@@ -128,7 +128,7 @@ module.exports = function(grunt) {
         src: ['**/*']
     }
   });
-  
+
   grunt.registerTask ('deploy', ['gh-pages']);
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
