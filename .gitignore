@@ -8,4 +8,5 @@
 css/*.css
 node_modules/
 build/
+package-lock.json
 Thumbs.db
