@@ -1549,7 +1549,7 @@ textarea:-ms-input-placeholder {
     padding: 50px 140px 36px 140px;
   }
   .intro__content-wrapper::before {
-    top: -57px;
+    top: -56px;
     width: 768px;
     height: 57px;
     background: url("../img/bg-intro-triangle-tablet.svg") no-repeat;
@@ -1606,7 +1606,7 @@ textarea:-ms-input-placeholder {
     padding: 50px 356px 37px 356px;
   }
   .intro__content-wrapper::before {
-    top: -57px;
+    top: -56px;
     width: 1200px;
     height: 57px;
     background: url("../img/bg-intro-triangle-desktop.svg") no-repeat -3px 0;
@@ -1614,9 +1614,6 @@ textarea:-ms-input-placeholder {
   }
   .intro__content-wrapper_small {
     padding: 109px 379px 45px 379px;
-  }
-  .intro__content-wrapper_small::before {
-    top: -57px;
   }
   .intro__title {
     margin-bottom: 27px;
