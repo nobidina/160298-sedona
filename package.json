@@ -24,7 +24,7 @@
     "test": "editorconfig-cli",
     "build": "grunt build",
     "start": "npm run build && grunt serve",
-    "deploy": "grunt deploy"
+    "deploy": "grunt --verbose --stack deploy"
   },
   "editorconfig-cli": [
     "*.html",
