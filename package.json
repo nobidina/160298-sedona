@@ -23,7 +23,8 @@
   "scripts": {
     "test": "editorconfig-cli",
     "build": "grunt build",
-    "start": "npm run build && grunt serve"
+    "start": "npm run build && grunt serve",
+    "deploy": "grunt deploy"
   },
   "editorconfig-cli": [
     "*.html",
